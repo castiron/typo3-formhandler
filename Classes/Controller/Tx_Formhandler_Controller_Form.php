@@ -1290,6 +1290,10 @@ class Tx_Formhandler_Controller_Form extends Tx_Formhandler_AbstractController {
 
 		} elseif (intval($step) === intval($this->globals->getSession()->get('lastStep')) + 1) {
 			$this->finished = TRUE;
+
+		}
+		elseif (intval($step) === intval($this->lastStep) + 1) {
+			$this->finished = TRUE;
 		}
 	}
 
