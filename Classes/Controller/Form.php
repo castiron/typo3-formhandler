@@ -1261,6 +1261,8 @@ class Form extends AbstractController
 
         } elseif (intval($step) === intval($this->globals->getSession()->get('lastStep')) + 1) {
             $this->finished = TRUE;
+        } elseif (intval($step) === intval($this->lastStep) + 1) {
+            $this->finished = TRUE;
         }
     }
 
